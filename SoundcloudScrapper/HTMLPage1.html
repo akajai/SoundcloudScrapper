@@ -1,0 +1,653 @@
+﻿<!DOCTYPE html>
+<!--[if IE]>
+<![endif]-->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Explore groups on SoundCloud - Hear the world’s sounds</title>
+    <meta content="record, sounds, share, sound, audio, tracks, music, soundcloud" name="keywords" />
+    <meta content="Explore exciting Groups on SoundCloud, the largest community of artists, bands, podcasters and creators of music &amp; audio." name="description" />
+
+    <meta content="width=device-width" name="viewport" />
+    <meta content="IE=edge,chrome=1" name="X-UA-Compatible" />
+    <meta content="SoundCloud" name="application-name" />
+    <meta content="Launch SoundCloud" name="msapplication-tooltip" />
+    <meta content="http://a1.sndcdn.com/images/win8.png" name="msapplication-TileImage" />
+    <meta content="#ff6600" name="msapplication-TileColor" />
+    <meta content="https://soundcloud.com" name="msapplication-starturl" />
+    <meta content="http://a1.sndcdn.com/images/facebook_og_image.png?1464880459" property="og:image" />
+    <meta content="soundcloud" property="og:site_name" />
+    <meta content="19507961798" property="fb:app_id" />
+    <meta content="http://soundcloud.com/groups" property="og:url" />
+    <!--[if IE]>
+    <script src="http://a1.sndcdn.com/javascripts/plugins/vendor/excanvas-compressed.js?1464880459" type="text/javascript"></script>
+    <![endif]-->
+    <!--[if IE 9]>
+    <script type="text/javascript">
+    document.getElementsByTagName("html")[0].className = "ie9";
+    </script>
+    <![endif]-->
+    <!--[if IE 8]>
+    <script type="text/javascript">
+    document.getElementsByTagName("html")[0].className = "ie8";
+    </script>
+    <![endif]-->
+    <!--[if lte IE 8]>
+    <script type="text/javascript">
+    document.getElementsByTagName("html")[0].className = "ie7";
+    </script>
+    <meta content="true" name="MSSmartTagsPreventParsing" />
+    <meta content="false" http-equiv="imagetoolbar" />
+    <![endif]-->
+    <script type="text/javascript">
+window.SC = {"bufferTracks":[],"bufferComments":[],"cookieDomain":"soundcloud.com","assetPath":"a1.sndcdn.com","facebook":{"appId":"19507961798","appKey":"61261ce0407b2ccb568641b513098e18","namespace":"soundcloud","xdReceiver":"/connect/xd_receiver.htm"},"clientID":"642aa4110ea8a23d048f4fd67ff465da","scApiDomain":"api.soundcloud.com","songkickApiKey":"ZWsLr2h7FF5sHG54","gaID":"UA-2519404-1"};
+    </script>
+    <link href="http://a1.sndcdn.com/stylesheets/general.css?1464880952" media="all" rel="stylesheet" type="text/css" />
+    <link href="http://a1.sndcdn.com/stylesheets/special.css?1464880954" media="all" rel="stylesheet" type="text/css" />
+    <link href="/sc-opensearch.xml" rel="search" title="SoundCloud Search" type="application/opensearchdescription+xml" />
+
+    <link href="http://a1.sndcdn.com/images/apple-touch-icon.png?1464880459" rel="apple-touch-icon" />
+    <link href="http://a1.sndcdn.com/favicon.ico?1412881676" rel="shortcut icon" />
+    <link href="http://a1.sndcdn.com/images/soundcloud_app.png?1464880459" rel="fluid-icon" />
+    <link href="https://plus.google.com/111859952716487912198" rel="publisher" />
+</head>
+<body class="index restricted profile" id="groups">
+    <div class="dormant">
+        <div class="announcement">
+            <a href="#" class="announcement-close close" title="Hide this help-text">hide</a>
+            <span class="exclamation"></span>
+            <p class="message"></p>
+        </div>
+    </div>
+
+    <div id="header">
+        <div id="header-top">
+            <div id="sc-info">&nbsp;</div>
+            <div id="user-status">
+                <a href="/" id="logo">Soundcloud</a>
+                <div class="logged-in">
+                    <abbr title="It's Swedish for 'Hi'">Hej,</abbr>
+                    <span id="logged-in-user">
+                        <a href="/" class="current-user" id="current-user-head">stranger</a>
+                        <a class="premium" href="/premium?ref=t027" id="current-plan-badge"></a>
+                    </span>
+                    |
+                    <script type="text/javascript">
+  //<![CDATA[
+    window.SC.renderLoginStatus = function() {
+      var $p = document.getElementById('current-plan-badge')
+        , $h = document.getElementById('current-user-head')
+        , $u = document.getElementById('logged-in-user')
+        , $ht = document.getElementsByTagName('html')[0]
+        , $b = document.getElementsByTagName('body')[0]
+        , w = $b.getAttribute('data-sc-owner')
+        , c = document.cookie.split(';')
+        , u = {}
+        , o = {};
+
+      for(var i = 0; i < c.length; i++) {
+        var pair = c[i].split('=');
+        o[pair[0].replace(/^\s/, '')] = decodeURIComponent(pair[1]).replace(/\+/g, ' ');
+      }
+
+      if($h) {
+        $h.innerHTML = '';
+        $h.appendChild(document.createTextNode(o['u'] || 'stranger'));
+        $h.href = '/' + o['p'];
+      }
+
+      if($ht) {
+        $ht.className = $ht.className.replace(/ ?(anonymous|logged-in)/g, '');
+        $ht.className += o['p'] ? ' logged-in' : ' anonymous';
+      }
+
+      u.authenticityToken = o['k']
+      u.avatarTiny = o['a'];
+      u.permalink = o['p'];
+      u.plan = o['l'];
+      u.planName = o['c'];
+      u.id = parseInt(o['i']);
+
+      if(o['t']) {
+        u.types = o['t'].split('&');
+      } else {
+        u.types = [];
+      }
+
+      u.quota = {};
+      u.quota.playlists = o['qp'];
+      u.quota.sharings_per_track = o['qs'];
+      u.quota.contributions_per_track = o['qc'];
+      u.quota.contact_groupings = o['qn'];
+      u.quota.groups = o['qg'];
+      u.quota.support = o['qt'];
+
+      if(o['c'] === 'free') {
+        if($u) { $u.className = 'free-user'; }
+        if($p) { $p.className += ' hidden' }
+      } else {
+        if($p) { $p.className += ' plan-' + o['c']; }
+      }
+
+      if($b && w && (w === u.permalink)) {
+        $b.className += ' current-user';
+      }
+
+      window.SC.currentUser = u;
+    };
+
+    window.SC.renderLoginStatus();
+  //]]>
+                    </script>
+
+                    <a href="/settings">Settings</a>
+                    |
+                    <a class="inbox" href="/messages">
+                        Messages
+                        <cite class="user-counter" id="user-inbox-counter" style="display: none;"></cite>
+                    </a>
+                    |
+                    <a href="/logout" class="header-logout">Sign out</a>
+                    <div class="hidden" id="user-id"></div>
+                </div>
+                <div class="anonymous"><a href="/login" class="sign-in" id="login-link">Sign in</a> | <a href="/signup" class="sign-in" id="signup-link">Create account</a></div>
+            </div>
+        </div>
+        <div id="header-lower">
+            <ul id="main-nav">
+                <li class="nav no-submenu anonymous" id="menu-button-home">
+                    <a href="/">Home</a>
+                    <div class="open-submenu"></div>
+                </li>
+                <li class="nav no-submenu anonymous" id="menu-button-signup">
+                    <a href="/signup">Sign Up</a>
+                    <div class="open-submenu"></div>
+                </li>
+                <li class="no-submenu nav logged-in" id="menu-button-dashboard">
+                    <a href="/">Home</a>
+                    <div class="open-submenu"></div>
+                </li>
+                <li class="nav submenu logged-in" id="menu-button-you">
+                    <a href="/you/tracks">You</a>
+                    <div class="open-submenu"></div>
+                    <ul class="tabs"><li class="first" data-sc-cnt="tracks"><a href="/you/tracks">Sounds</a></li><li data-sc-cnt="playlists"><a href="/you/sets">Sets</a></li><li data-sc-cnt="comments"><a href="/you/comments">Comments</a></li><li data-sc-cnt="likes"><a href="/you/likes">Favorites</a></li><li data-sc-cnt="moderated_groups"><a href="/you/groups">Groups</a></li><li><a href="/you/profile">Your public Profile</a></li><li class="last"><a href="/you/stats">Your Stats</a></li></ul>
+                </li>
+                <li class="nav submenu logged-in" id="menu-button-tracks">
+                    <a href="/tracks">Tracks</a>
+                    <div class="open-submenu"></div>
+                    <ul class="tabs"><li class="first"><a href="/tracks">Explore Sounds</a></li><li class="last"><a href="/tracks/search">Search for Sounds</a></li></ul>
+                </li>
+                <li class="nav submenu logged-in" id="menu-button-people">
+                    <a href="/people">People</a>
+                    <div class="open-submenu"></div>
+                    <ul class="tabs"><li class="first"><a href="/people">Explore People</a></li><li><a href="/people/finder">Find Friends</a></li><li class="last"><a href="/people/search">Search for People</a></li></ul>
+                </li>
+                <li class="nav submenu logged-in" id="menu-button-groups">
+                    <a href="/groups/joined">Groups</a>
+                    <div class="open-submenu"></div>
+                    <ul class="tabs"><li class="first" data-sc-cnt="groups"><a href="/groups/joined">You've joined</a></li><li class="current"><a href="/groups/latest">Explore Groups</a></li><li class="last"><a href="/groups/search">Search for Groups</a></li></ul>
+                </li>
+                <li id="menu-button-upload"><a href="/upload" class="link-button">Upload &amp; Share</a></li>
+            </ul>
+
+            <div id="search">
+                <form action="/search" method="get">
+                    <input accesskey="f" autocomplete="off" class="blurred" id="header-search" name="q[fulltext]" placeholder="Search SoundCloud" type="text" value="Search SoundCloud" />
+                    <div class="search-selector" title="Select what you want to search for"></div>
+                    <ul class="pulldown hidden search-select">
+                        <li><a href="/tracks/search">Tracks</a></li>
+                        <li><a href="/people/search">Users</a></li>
+                        <li><a href="/groups/search">Groups</a></li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-wrapper">
+        <div id="main-wrapper-inner">
+            <div id="side-content">
+            </div>
+            <div id="main-content">
+                <div id="main-content-inner">
+                    <h1>Explore Groups</h1>
+                    <ul class="tabs"><li class="current"><a href="/groups">Active Groups</a></li></ul>
+                    <ul class="group-list">
+                        <li class="group medium">
+                            <a class="artwork-large" href="/groups/its-a-trap" style="background:url(http://i1.sndcdn.com/artworks-000036325308-wvqm55-large.jpg)">User Image</a>
+                            Group
+                            <h3>
+                                <a href="/groups/its-a-trap" title="It's a trap!">It's a trap!</a>
+                                <span>All Producers, DJ's, Fans that love trap! Here you are at the right place! If you love trap music at you at this group!  </span>
+                            </h3>
+                            <div class="actions">
+                                <a href="/groups/its-a-trap/grouping" class="membership button create" onclick="return false;" rel="nofollow"><span>Join group</span></a>
+                                <span class="meta-data">
+                                    <span class="stats">
+                                        <span class="tracks first" title="5567 tracks">5567</span>
+                                        <span class="comments" title="0 posts">0</span>
+                                        <span class="members" title="1799 members">1799</span>
+                                    </span>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="group medium">
+                            <a class="artwork-large" href="/groups/beatsonly-instrumental-hip-hop" style="background:url(http://i1.sndcdn.com/artworks-000038248778-yn5kki-large.jpg)">User Image</a>
+                            Group
+                            <h3>
+                                <a href="/groups/beatsonly-instrumental-hip-hop" title="BEATS ONLY // Instrumental Hip-Hop, Beat-Tapes &amp; Beatmaker Promotion Group">BEATS ONLY // Instrumental Hip-H...</a>
+                                <span>Post your stuff here // COMMENT &amp; FOLLOW OTHERS!</span>
+                            </h3>
+                            <div class="actions">
+                                <a href="/groups/beatsonly-instrumental-hip-hop/grouping" class="membership button create" onclick="return false;" rel="nofollow"><span>Join group</span></a>
+                                <span class="meta-data">
+                                    <span class="stats">
+                                        <span class="tracks first" title="63615 tracks">63615</span>
+                                        <span class="comments" title="8 posts">8</span>
+                                        <span class="members" title="10431 members">10431</span>
+                                    </span>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="group medium">
+                            <a class="artwork-large" href="/groups/beats-for-sale-free-beats-beats-for-emcees-rappers" style="background:url(http://i1.sndcdn.com/artworks-000009525355-a21a8l-large.jpg)">User Image</a>
+                            Group
+                            <h3>
+                                <a href="/groups/beats-for-sale-free-beats-beats-for-emcees-rappers" title="FREE BEATS UNDERGROUND HIP HOP/RAP">FREE BEATS UNDERGROUND HIP HOP/RAP</a>
+                                <span>*Only beats whithout emcees and singers</span>
+                            </h3>
+                            <div class="actions">
+                                <a href="/groups/beats-for-sale-free-beats-beats-for-emcees-rappers/grouping" class="membership button create" onclick="return false;" rel="nofollow"><span>Join group</span></a>
+                                <span class="meta-data">
+                                    <span class="stats">
+                                        <span class="tracks first" title="50926 tracks">50926</span>
+                                        <span class="comments" title="33 posts">33</span>
+                                        <span class="members" title="10777 members">10777</span>
+                                    </span>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="group medium">
+                            <span class="artwork-large">User Image</span>
+                            Group
+                            <h3>
+                                <a href="/groups/russian-hip-hop-and-rap" title="Russian Hip-Hop and Rap">Russian Hip-Hop and Rap</a>
+                                <span>Everything Russian Rap and Hip-Hop</span>
+                            </h3>
+                            <div class="actions">
+                                <a href="/groups/russian-hip-hop-and-rap/grouping" class="membership button create" onclick="return false;" rel="nofollow"><span>Join group</span></a>
+                                <span class="meta-data">
+                                    <span class="stats">
+                                        <span class="tracks first" title="2722 tracks">2722</span>
+                                        <span class="comments" title="7 posts">7</span>
+                                        <span class="members" title="1202 members">1202</span>
+                                    </span>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="group medium">
+                            <a class="artwork-large" href="/groups/ambient-rock" style="background:url(http://i1.sndcdn.com/artworks-000001533426-gs834d-large.jpg)">User Image</a>
+                            Group
+                            <h3>
+                                <a href="/groups/ambient-rock" title="Ambient/Post Rock">Ambient/Post Rock</a>
+                                <span>A place for Ambient and Post Rock artists</span>
+                            </h3>
+                            <div class="actions">
+                                <a href="/groups/ambient-rock/grouping" class="membership button create" onclick="return false;" rel="nofollow"><span>Join group</span></a>
+                                <span class="meta-data">
+                                    <span class="stats">
+                                        <span class="tracks first" title="56367 tracks">56367</span>
+                                        <span class="comments" title="59 posts">59</span>
+                                        <span class="members" title="15910 members">15910</span>
+                                    </span>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="group medium">
+                            <a class="artwork-large" href="/groups/ethereal-cloud-rap-and-vaporwave-music" style="background:url(http://i1.sndcdn.com/artworks-000110772759-jo8r9l-large.jpg)">User Image</a>
+                            Group
+                            <h3>
+                                <a href="/groups/ethereal-cloud-rap-and-vaporwave-music" title="Ethereal Cloud Rap and Vaporwave Music.">Ethereal Cloud Rap and Vaporwave...</a>
+                                <span>A place for anything trippy, cloud rap, vaporwave, new age hip-hop, all are welcome.</span>
+                            </h3>
+                            <div class="actions">
+                                <a href="/groups/ethereal-cloud-rap-and-vaporwave-music/grouping" class="membership button create" onclick="return false;" rel="nofollow"><span>Join group</span></a>
+                                <span class="meta-data">
+                                    <span class="stats">
+                                        <span class="tracks first" title="6197 tracks">6197</span>
+                                        <span class="comments" title="3 posts">3</span>
+                                        <span class="members" title="1562 members">1562</span>
+                                    </span>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="group medium">
+                            <span class="artwork-large">User Image</span>
+                            Group
+                            <h3>
+                                <a href="/groups/hip-hop-16" title="HIP-HOP">HIP-HOP</a>
+                                <span>ANTHONY'S MUSIC</span>
+                            </h3>
+                            <div class="actions">
+                                <a href="/groups/hip-hop-16/grouping" class="membership button create" onclick="return false;" rel="nofollow"><span>Join group</span></a>
+                                <span class="meta-data">
+                                    <span class="stats">
+                                        <span class="tracks first" title="47718 tracks">47718</span>
+                                        <span class="comments" title="70 posts">70</span>
+                                        <span class="members" title="11146 members">11146</span>
+                                    </span>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="group medium">
+                            <a class="artwork-large" href="/groups/rap-music" style="background:url(http://i1.sndcdn.com/artworks-000002205897-r7lhwa-large.jpg)">User Image</a>
+                            Group
+                            <h3>
+                                <a href="/groups/rap-music" title="Rap Music">Rap Music</a>
+                                <span></span>
+                            </h3>
+                            <div class="actions">
+                                <a href="/groups/rap-music/grouping" class="membership button create" onclick="return false;" rel="nofollow"><span>Join group</span></a>
+                                <span class="meta-data">
+                                    <span class="stats">
+                                        <span class="tracks first" title="226820 tracks">226820</span>
+                                        <span class="comments" title="238 posts">238</span>
+                                        <span class="members" title="37638 members">37638</span>
+                                    </span>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="group medium">
+                            <a class="artwork-large" href="/groups/hip-hop-underground-experimental-instrumental-for-artists-producers-movies-tv-advertising" style="background:url(http://i1.sndcdn.com/artworks-000000759679-65ffp0-large.jpg)">User Image</a>
+                            Group
+                            <h3>
+                                <a href="/groups/hip-hop-underground-experimental-instrumental-for-artists-producers-movies-tv-advertising" title="Hip Hop - Underground, Experimental, Instrumental, Vocals, Trip hop, Breaks - for Artists, Producers, Movies, TV, Advertising, Apps &amp; Video Games.">Hip Hop - Underground, Experimen...</a>
+                                <span>This groups is for Artists &amp; Producers who make music for Artists, Movies, TV, Advertising, Apps &amp; Video Games</span>
+                            </h3>
+                            <div class="actions">
+                                <a href="/groups/hip-hop-underground-experimental-instrumental-for-artists-producers-movies-tv-advertising/grouping" class="membership button create" onclick="return false;" rel="nofollow"><span>Join group</span></a>
+                                <span class="meta-data">
+                                    <span class="stats">
+                                        <span class="tracks first" title="298415 tracks">298415</span>
+                                        <span class="comments" title="114 posts">114</span>
+                                        <span class="members" title="48344 members">48344</span>
+                                    </span>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="group medium">
+                            <a class="artwork-large" href="/groups/experimental-hip-hop" style="background:url(http://i1.sndcdn.com/artworks-000000522033-vxjj3n-large.jpg)">User Image</a>
+                            Group
+                            <h3>
+                                <a href="/groups/experimental-hip-hop" title="Experimental Hip Hop">Experimental Hip Hop</a>
+                                <span>The outer limits of Hip Hop</span>
+                            </h3>
+                            <div class="actions">
+                                <a href="/groups/experimental-hip-hop/grouping" class="membership button create" onclick="return false;" rel="nofollow"><span>Join group</span></a>
+                                <span class="meta-data">
+                                    <span class="stats">
+                                        <span class="tracks first" title="234268 tracks">234268</span>
+                                        <span class="comments" title="166 posts">166</span>
+                                        <span class="members" title="39503 members">39503</span>
+                                    </span>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="group medium">
+                            <a class="artwork-large" href="/groups/french-trap-group" style="background:url(http://i1.sndcdn.com/artworks-000033242275-796c25-large.jpg)">User Image</a>
+                            Group
+                            <h3>
+                                <a href="/groups/french-trap-group" title="FRENCH TRAP Group">FRENCH TRAP Group</a>
+                                <span>Reunion dé Beatmaker les plus HARD en TRAP / Meeting of French Trap Beatmaker *HARDER EXCLUSIVE*</span>
+                            </h3>
+                            <div class="actions">
+                                <a href="/groups/french-trap-group/grouping" class="membership button create" onclick="return false;" rel="nofollow"><span>Join group</span></a>
+                                <span class="meta-data">
+                                    <span class="stats">
+                                        <span class="tracks first" title="6818 tracks">6818</span>
+                                        <span class="comments" title="0 posts">0</span>
+                                        <span class="members" title="2120 members">2120</span>
+                                    </span>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="group medium">
+                            <a class="artwork-large" href="/groups/electro-freaks" style="background:url(http://i1.sndcdn.com/artworks-000002736667-pn5f9k-large.jpg)">User Image</a>
+                            Group
+                            <h3>
+                                <a href="/groups/electro-freaks" title="Electro Freaks">Electro Freaks</a>
+                                <span>Originally founded in October 2008 on thesixtyone.com.  We love electro!</span>
+                            </h3>
+                            <div class="actions">
+                                <a href="/groups/electro-freaks/grouping" class="membership button create" onclick="return false;" rel="nofollow"><span>Join group</span></a>
+                                <span class="meta-data">
+                                    <span class="stats">
+                                        <span class="tracks first" title="43182 tracks">43182</span>
+                                        <span class="comments" title="104 posts">104</span>
+                                        <span class="members" title="11284 members">11284</span>
+                                    </span>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="pagination"><span class="disabled prev_page">Prev</span> <span class="current">1</span> <a href="/groups/latest?page=2" rel="next">2</a> <a href="/groups/latest?page=3">3</a> <span class="gap">&hellip;</span> <a href="/groups/latest?page=15391">15391</a> <a href="/groups/latest?page=2" class="next_page" rel="next">Next</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="footer-col">
+            <h4>Collection</h4>
+            <ul>
+                <li><a href="/you/likes">Likes</a></li>
+                <li><a href="/you/sets">Playlists</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="/tracks">Tracks</a></li>
+                <li><a href="/people">People</a></li>
+                <li><a href="/groups">Groups</a></li>
+                <li><a href="/mobile">Mobile</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Pro Plans</h4>
+            <ul>
+                <li><a href="/premium?ref=t025">Feature Overview</a></li>
+                <li><a class="icon-button" href="/premium?ref=t026"><span class="go-pro">Go Pro</span></a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>About Us</h4>
+            <ul>
+                <li><a href="/pages/contact">About SoundCloud</a></li>
+                <li><a href="http://blog.soundcloud.com">Blog</a></li>
+                <li><a href="https://soundcloud.com/jobs">Jobs</a></li>
+                <li><a href="/press">Press</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Help</h4>
+            <ul>
+                <li><a href="/101">SoundCloud 101</a></li>
+                <li><a href="http://help.soundcloud.com">Help</a></li>
+            </ul>
+        </div>
+        <div class="footer-col last">
+            <h4>Developers</h4>
+            <ul>
+                <li><a href="http://developers.soundcloud.com">Get Started</a></li>
+                <li><a href="http://developers.soundcloud.com/docs">Documentation</a></li>
+                <li><a href="http://backstage.soundcloud.com/">Backstage Blog</a></li>
+                <li class="logged-in"><a href="/you/apps">Your Apps</a></li>
+            </ul>
+        </div><p id="copyright">
+            © 2007-2016 SoundCloud Ltd. All rights reserved.
+            <a href="/community-guidelines">Community Guidelines</a>
+            |
+            <a href="/terms-of-use">Terms of Use</a>
+            |
+            <a href="/pages/privacy">Privacy Policy</a>
+            |
+            <a href="/pages/copyright">Copyright Information</a>
+            |
+            <a href="/imprint">Imprint</a>
+        </p>
+    </div>
+    <div class="templates aural">
+        <div id="wordpress-form">
+            <h2>Share to WordPress.com</h2>
+            <form>
+                <label for="short-code">
+                    Grab the <strong>shortcode</strong> or
+                    <a class="customize-link" href="#customize">customize your player</a>
+                </label>
+                <input class="content auto-select" id="short-code" name="short-code" />
+                <div class="expl">
+                    If you are using <strong>self-hosted WordPress</strong>, please use our standard embed code or install the
+                    <a href="http://wordpress.org/extend/plugins/soundcloud-shortcode/">plugin</a>
+                    to use shortcodes.
+                </div>
+            </form>
+        </div>
+
+        <div id="timestamped-comment-template">
+            <div class="content">
+                <div class="header">
+                    <a class="close" href="#"></a>
+                    <span class="new">Add a comment</span>
+                    <span class="count">0 comments</span>
+                    at
+                    <span class="time">0.00</span>
+                </div>
+                <div class="replies">
+                    <ol></ol>
+                    <div class="form-buttons"><input class="reply small" type="submit" value="Reply" /></div>
+                </div>
+                <div class="tooltip">
+                    <abbr>
+                        Click to enter a
+                        <br />
+                        comment at
+                    </abbr>
+                    <span>0.00</span>
+                </div>
+                <div class="footer"></div>
+            </div>
+            <div class="arrow"></div>
+        </div>
+
+        <div class="aural">
+            <div id="unlock-form">
+                <div class="site-login-form-wrapper zoom">
+                    <div class="login-header">
+                        <form action="https://soundcloud.com/login/facebook/create?redirect_uri=http%3A%2F%2Fsoundcloud.com%2Fgroups" class="connect-facebook" id="facebook-connect-form" method="POST">
+                            <input name="token" type="hidden" value="" />
+                            <input name="sig" type="hidden" value="" />
+                            <input alt="With your facebook account" class="facebook-signin" tabindex="0" type="submit" />
+                        </form><a class="google-plus-signin" data-accesstype="offline" data-apppackagename="com.soundcloud.android" data-callback="googlePlusSigninCallback" data-clientid="984739005367.apps.googleusercontent.com" data-cookiepolicy="single_host_origin" data-login_via="/login/google_plus/create" data-redirect_uri="http://soundcloud.com/groups" data-redirecturi="postmessage" data-requestvisibleactions="http://schemas.google.com/AddActivity http://schemas.google.com/ListenActivity http://schemas.google.com/CreateActivity" data-scope="https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.profile" data-state="eyJjb250cm9sbGVyIjoicHJvZmlsZS9ncm91cHMiLCJhY3Rpb24iOiJpbmRl&#x000A;eCIsImdvb2dsZV9wbHVzX2F1dGhlbnRpY2l0eSI6IjE0NmE1ZWFjMDNjZGI0&#x000A;M2QzYTRjMmJhNjhkYmQzYTI1In0=&#x000A;"></a>
+                    </div>
+                    <br />
+                    <div class="social-sign-in-separator sc-font-light sc-text-light"><span>or</span></div>
+                    <ul class="tabs">
+                        <li class="first "><a href="/login" id="tab-log-in-link" tabindex="1">Sign in</a></li>
+                        <li class="last current"><a href="/signup" id="tab-sign-up-link" tabindex="2">Create an account</a></li>
+                    </ul>
+                    <div class="pane hidden" id="tab-log-in">
+                        <form accept-charset="utf-8" action="https://soundcloud.com/session" id="login-form" method="post">
+                            <input name="token" type="hidden" value="" />
+                            <input name="uid" type="hidden" value="" />
+                            <div class="form-group"><label for="site-username">Your email address</label><input id="login_submitted_via" name="login_submitted_via" type="hidden" value="zoom" /><input class="title auto-select sc-input" id="site-username" name="username" tabindex="3" type="text" /></div>
+                            <div class="form-group">
+                                <label for="site-password">
+                                    Password
+                                    <a href="/login/forgot" class="forgot-link" tabindex="7">Forgot password?</a>
+                                </label><input class="title auto-select sc-input" id="site-password" name="password" tabindex="4" type="password" />
+                            </div>
+                            <div class="remember">
+                                <div class="checkbox">
+                                    <input checked="checked" id="site-remember-me" name="remember_me" type="checkbox" />
+                                    <label for="site-remember-me" tabindex="5">Remember me</label>
+                                </div>
+                            </div>
+                            <div class="form-buttons"><input class="sc-button sc-button-cta" id="log-in-submit-button" name="commit" tabindex="6" type="submit" value="Sign in" /><a href="#" class="sc-button sc-button-nostyle" onclick="return false;" rel="nofollow" tabindex="8">Cancel</a></div>
+                        </form>
+                        <div class="forgot-password">
+                            <div class="forgot-password-container hidden">
+                                <form accept-charset="utf-8" action="/login/forgot" id="forgot-password-form" method="post">
+                                    <div class="form-group">
+                                        <label for="email">
+                                            <strong>
+                                                Your email address or profile URL
+                                            </strong>
+                                        </label><input class="auto-focus sc-input sc-input-large" id="email" name="email" type="text" />
+                                    </div>
+                                    <p class="sc-type-light">
+                                        Enter your email address and we’ll send you a link to change your password. If you still need help,
+                                        <a href="http://youraccount.help.soundcloud.com/customer/en/portal/topics/839179-help-accessing-your-account/articles" target="_blank">visit our Help Center</a>.
+                                    </p>
+                                    <div class="form-buttons"><input class="sc-button sc-button-large sc-button-cta" name="commit" type="submit" value="Send" /><a href="/login" class="sc-button sc-button-large sc-button-nostyle forgot-link-back">Cancel</a></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pane " id="tab-sign-up">
+                        <form accept-charset="utf-8" action="https://soundcloud.com/signup" class="suggest-email" id="signup-form" method="post">
+
+                            <div class="form-group">
+                                <div class="width_full">
+                                    <label for="user_email">What’s your email address?</label>
+                                    <input autocomplete="off" class="sc-input" id="user_email" maxlength="255" name="user[email]" size="255" type="text" />
+                                    <small class="correction-notice hidden">
+                                        Whoops, we corrected your misspelled email address
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="width_1_2"><label for="user_password">Choose a password</label><input autocomplete="off" class="sc-input" id="user_password" maxlength="255" name="user[password]" size="255" type="password" /></div>
+                                <div class="width_1_2 last"><label for="user_password_confirmation">Re-type password</label><input autocomplete="off" class="sc-input" id="user_password_confirmation" maxlength="255" name="user[password_confirmation]" size="255" type="password" /></div>
+                            </div>
+                            <div class="t-and-c">
+                                <div class="checkbox">
+                                    <input id="user_terms_of_use" name="user[terms_of_use]" tabindex="" type="checkbox" value="1" />
+                                    <label for="user_terms_of_use">
+                                        I agree to the
+                                        <a href="/terms-of-use" target="_blank">Terms of Use</a>
+                                        and
+                                        <a href="/pages/privacy" target="_blank">Privacy Policy</a>
+                                    </label>
+                                </div>
+                                <div class="checkbox" style="margin-top: 10px;">
+                                    We may use your email for updates and tips about
+                                    <a href="/imprint" target="_blank">SoundCloud’s</a>
+                                    products and services. You can unsubscribe for free at any time in your
+                                    notification preferences.
+                                </div>
+                            </div>
+                            <div class="form-buttons">
+                                <input class="sc-button sc-button-cta" id="user-submit" name="commit" type="submit" value="Create account" />
+                                <a class="sc-button sc-button-nostyle" href="/">Cancel</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="http://a1.sndcdn.com/javascripts/base.js?1464880999" type="text/javascript"></script>
+
+    <script type="text/javascript">
+  //<![CDATA[
+    (function() {
+      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+      po.src = 'https://apis.google.com/js/client:plusone.js?onload=googlePlusRenderPlusButton';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+  //]]>
+    </script>
+
+
+</body>
+</html>
