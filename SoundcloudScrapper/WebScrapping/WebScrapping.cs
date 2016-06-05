@@ -10,55 +10,58 @@ using System.Configuration;
 
 namespace SoundcloudScrapper.WebScrapping
 {
-    public static class WebScrapping { 
-         private static readonly log4net.ILog log =
-           log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-    public static void ScrapHTML()
+    public static class WebScrapping
+    {
+        private static readonly log4net.ILog log =
+          log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        public static void ScrapHTML()
         {
             try
             {
+
+             //   HtmlNode groupHTML = null;
                 var getHtmlWeb = new HtmlWeb();
                 String strurl = ConfigurationSettings.AppSettings["groupurl"].ToString();
                 //<h3><a href="/groups/its-a-trap" title="It's a trap!">It's a trap!</a>
+                MasterList masterList = new MasterList();
+                masterList.group = new List<Groups>();
 
                 var document = getHtmlWeb.Load(strurl).DocumentNode.SelectNodes("//div");//.FindFirst("main-content;
                 foreach (var aTag in document)
                 {
                     if (aTag.Id == "main-content-inner")
                     {
-                        var childNode = aTag.ChildNodes;
-                        int i = 0;
-                        foreach ( var node in childNode)
+                        
+                        long groupCount = aTag.ChildNodes[4].InnerHtml.ToHtmlNode().ChildNodes.Count / 2;
+                       
+                        log.Info(" -- --groupCount----" + groupCount);
+                        for (int index_i = 0; index_i < groupCount; index_i++)
                         {
-                            log.Info("index " +i++ +" - " +node.InnerHtml);
+                            var groupHTML = aTag.ChildNodes[4].ChildNodes[index_i * 2].ChildNodes[2].InnerHtml;
+                            //log.Info("   ---  4----index_i " + index_i + " -- " + groupHTML.ToHtmlNode().InnerText + " -- " + groupHTML.ToHDocument().Children[0].Attributes[0].ToString());
+                            log.Info("   ---  1----index_i " + index_i + " -- " + aTag.ChildNodes[4].ChildNodes[index_i * 2].ChildNodes[2].ChildNodes[0].Attributes[0].Value);
+                            log.Info("   ---  2----index_i " + index_i + " -- " + aTag.ChildNodes[4].ChildNodes[index_i * 2].ChildNodes[2].InnerText);
+                            log.Info("   ---  3----index_i " + index_i + " -- " + aTag.ChildNodes[4].ChildNodes[(index_i * 2)].ChildNodes[4].ChildNodes[2].ChildNodes[0].ChildNodes[4].InnerText);
+
+                            Groups groups = new Groups();
+                            groups.groupURL = aTag.ChildNodes[4].ChildNodes[index_i * 2].ChildNodes[2].ChildNodes[0].Attributes[0].Value;
+                            groups.groupName = aTag.ChildNodes[4].ChildNodes[index_i * 2].ChildNodes[2].InnerText;
+                            groups.nummembers = long.Parse(aTag.ChildNodes[4].ChildNodes[(index_i * 2)].ChildNodes[4].ChildNodes[2].ChildNodes[0].ChildNodes[4].InnerText);
+
+                            masterList.group.Add(groups);
+                                
                         }
-                      
                     }
 
 
                 }
 
-                    //  GetElementbyId("main-content");
-
-
-                    //var aTags = document.DocumentNode.SelectNodes("//a");
-
-                    /*ScrapingBrowser Browser = new ScrapingBrowser();
-                    Browser.AllowAutoRedirect = true; // Browser has settings you can access in setup
-                    Browser.AllowMetaRedirect = true;
-                   // Browser.Timeout = 60000;
-                    String strurl = ConfigurationSettings.AppSettings["groupurl"].ToString();
-                    strurl = "https://soundcloud.com/";
-                    WebPage PageResult = Browser.NavigateToPage(new Uri(strurl));
-                    HtmlNode TitleNode = PageResult.Html.FirstChild;
-                    */
-                    //string PageTitle = TitleNode.InnerText;
-                }
+            }
             catch (Exception ex)
             {
                 log.Info("ScrapHTML Exception " + ex.Message);
             }
-            
+
         }
-}
+    }
 }
